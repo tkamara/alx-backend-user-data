@@ -43,7 +43,7 @@ class DB:
         """returns the first row found in the users table
         as filtered by the method’s input arguments
         """
-        columns = ['id', 'email', 'hased_password',
+        columns = ['id', 'email', 'hashed_password',
                    'session_id', 'reset_token']
         for arg in kwargs:
             if arg not in columns:
