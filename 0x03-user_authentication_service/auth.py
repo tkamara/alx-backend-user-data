@@ -80,10 +80,9 @@ class Auth:
     def destroy_session(self, user_id: int) -> None:
         """updates user's session ID to none"""
         try:
-            self._db.update_user(user_id=user.id, session_id=None)
-            return None
+            self._db.update_user(user_id, session_id=None)
         except Exception:
-            return
+            return None
 
     def get_reset_password_token(self, email: str) -> str:
         """dealing with reset token"""
