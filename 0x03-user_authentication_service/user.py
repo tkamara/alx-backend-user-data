@@ -8,6 +8,7 @@ Base = declarative_base()
 
 
 class User(Base):
+    """declaring mapping"""
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
